@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Compare | Novocom</title>
+	<link rel="stylesheet" href="compare.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<!--The following button is for the back-top-button that is codeed with @keyframe CSS animations and Java Script-->
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+	<div class="container">
+		<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+		<header>
+			<img class="logo" src="images/logo.png" href="index.html">
+			<nav>
+				<ul class="nav-links">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="explore.html">Explore</a></li>
+					<li class="dropdown nav-item">
+						<a href="compare.html" class="dropbtn">Compare</a>
+						<div class="dropdown-content">
+							<a href="price.html">Price</a>
+							<a href="type.html">Type</a>
+							<a href="user.html">User</a>
+						</div>
+					</li>
+				</ul>
+				<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+				<a class="cta" href="contact.html"><button>Contact</button></a>
+			</nav>
+
+			<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+			<a class="menu cta"><button>Menu</button></a>
+		</header>
+		<div class="overlay">
+			<a class="close">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="explore.html">Explore</a>
+				<li class="dropdown">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.htm">User</a>
+					</div>
+				</li>
+				<a href="contact.html">Contact</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+		<!--Responsive, mobile navigation elements end-->
+		<!--Navbar elements end-->
+		<!--Header section ends-->
+
+
+		<!--Homepage/body section begins-->
+		<!--the following code is for the main header at the top of the page containing some images and brief text-->
+		<div class="header">
+			<div class="split">
+				<h3>Hardware Library</h3>
+
+				<!--The following code is for the image slideshow located in the left section of the split header container-->
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<img src="images/compare-hardware1.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/compare-hardware2.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/compare-hardware3.jpg" style="width:70%">
+					</div>
+
+				</div>
+				<br>
+				<div style="text-align:center">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<!--Slideshow container ends-->
+			</div>
+			<!--Left side of header container ends-->
+
+			<!--Right side of header container begins-->
+			<div class="split">
+				<p>Computers are made up of many small,internal components that determine the capabilities of a computer. When choosing a computer, it's important to know what you want, more importantly what you need. When it comes down to computers, there are many hardware components that determine what computer is suitable for what. The hardware you want in a computer is dependent on its use; here, we provide information and recommendations for every type of user out there.</p>
+				<p>Read our full library for every component including which ones would be suitable for you. Making the right choice when it comes to computers is difficult but we are always here for you. Just hover over each one!</p>
+			</div>
+			<!--Right side of header container ends-->
+		</div>
+		<!--Main header container ends here-->
+	</div>
+
+
+	<!--The following div class is the main container of the page aside from the header and the footer. By putting it into a seperate class, it becomes easier to seperate the design elements later on in the CSS-->
+	<!--The following code is for the cards containing the information about the hardware. Given the class of "card", each one is divided into two sections, the ".imagebox" and the ".content".-->
+	<!--Card 1 starts here-->
+	<div class="container2">
+		<div class="card">
+			<!--The data-text is styled with CSS to appear on the front size of the card with a lower opacity using rbga. Instead of treating it as a normal <p> tag, the data-text attribute makes it easier to manipulate-->
+			<div class="imgBx" data-text="Towers">
+				<img src="images/tower.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Tower</h3>
+				<p>A tower, also known as container or case, stores all the components in a desktop. Most towers today are vertically oriented to maximize a workspace and to also make it easier to store it somewhere next to your monitor or below your desk. They store every component in your computer including the motherboards, hard drives, optical drives, fans, cooling systems, graphics cards; just about anything you can think of.</p>
+				<h4>How do you differentiate towers?</h4>
+				<p>Towers come in a variety of sizes, materials, and weight. Most towers are made from strong metals such as steel or aluminum but include plastic components inside such as disk slot separators etc.</p>
+				<h4>Size</h4>
+				<p>Towers come in a small variety of size so it is easy to choose which one works the best for you. There are three main classifications: full tower, mid tower, and mini tower. Depending on your use of the computer, a full tower is optimal for gamers or people who need lots of space to expand your computer while a mid to mini tower size is the best for day-to-day school or office use. The bigger your tower is, the more possibilities you have to add extra drives, larger graphics card and additional parts.</p>
+				<h4>Price</h4>
+				<p>The price of towers depends mainly on their size, material and complex designs. Normal users purchase mid-mini towers that tend to cost $30 to $80. Gamers typically use full towers outfitted with glass casing, LED lights, extra storage slots which is why those can span from 100-200$.</p>
+				<a href="https://www.techwalla.com/articles/definition-of-computer-tower#:~:text=Most%20desktop%20PCs%20sold%20today%20are%20built%20in,enormous%20variety%20of%20sizes%20to%20suit%20every%20need." target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx long" data-text="Motherboard">
+				<img src="images/motherboard.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Motherboard</h3>
+				<p>A mother board is a flat circuit board that is considered the backbone of the computer. It hold most of the necessary parts of a computer and connects all the hardware components together while managing communication. All CPUs, RAM sticks, hard drives, video cards etc. are either on the motherboard or connected directly through cables. Big brands include Asus, Biosta, MSI and Intel.</p>
+				<h4>Size and Comparisons</h4>
+				<p>The typical ATX motherboard measures 305 x 244 mm and typically has 2-4 RAM slots. Comparing motherboards comes more specifically to their usage. When looking at a motherboard, you have to determine what size suits your tower size? You also have to think about the number of ram slots because, for gamers, expanding your RAM storage is something to expect when buying a motherboard. The type of motherboard you get depends on the speed you’re looking for. Motherboards are compared by the speed they communicate information, measured in megahertz, with the average speed ranging from 33-66MHz with a cost of $50-$100. Gaming computers range from 800MHz+ with the average price going from $300-$1200 depending on the manufacturer.</p>
+				<a href="https://www.lifewire.com/pc-motherboard-buyers-guide-833070" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx" data-text="CPU">
+				<img src="images/cpu.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Central Processing Unit</h3>
+				<p>A CPU, short for central processing unit, is the brain of your computer; it is responsible for processing and executing instructions while interacting with the other components of your device. Intel and AMD are the most common CPU manufacturers today; most computer processors come from them. They are easily compared by the number of cores they have (dual, quad etc.) and their ability to process information (measured in GHz).</p>
+				<h4>How to compare?</h4>
+				<p>The main two ways to compare CPUs are by their clock speed and their cores. A processor is measured by the number of instructions it can process and execute per second which is calculated by gigahertz. Casual users should always go for a clock speed of 1.8 to 2.4GHz for streamlined efficiency on their computers. Gaming computers tend to have a CPU with a clock speed of 3.5 GHz to 4.0 GHz. Another important criterion is the number of cores a CPU has, a core provides stability when processing multiple information sources. Dual core means that your CPU can manage 2 sets of instructions as a time. While 1 core processors have amazing performance, dual and quad core processors are the best for designers or gamers.</p>
+				<a href="https://www.quickanddirtytips.com/tech/computers/how-to-compare-computer-processors-cpus" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx" data-text="RAM">
+				<img src="images/ram.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Random-access Memory</h3>
+				<p>Random-access Memory (RAM) is your device’s short-term memory that temporarily provides storage and stores information from programs that currently run on your device. By storing that data on a short-term basis, RAM stores that readable information from the programs running for easy processing. When looking at RAM, you will typically see 4-8 GB on standard computers, but those small storage spaces make up with high speeds that are necessary for fast access to computing resources by communicating with the CPU. Unlike a hard drive, RAM is volatile memory since the data stored on it is erased when you shut down your computer.</p>
+				<h4>How much do you need: Measurements?</h4>
+				<p>RAM, just like hard drives, is measured in Gigabytes since it is also considered a storage medium. The amount of space a RAM has determines how much short-term storage your programs can take up and determines the speed of running tabs. The average RAM stick is 4-8GB with most devices taking 1-2 of the. Casual users fare well with 4 gigabytes but 8GB RAM is the most commonly used on PCs and some computers. The average 8GB stick of RAM comes as low as $25 and as high as $55 with the price depending on the clock speed (MHz) of the stick, higher clock speeds means faster memory storage speeds with an average of 1200+MHz. Gamers tend to use higher end RAM with regards to the size and speed. Most gaming desktops would take 2-4 16GB ram sticks meaning a total RAM of 32-64GB which is ideal for designing or running large programs such as games. A 16GB RAM stick of RAM typically cost $60-$100.</p>
+				<a href="https://www.digitaltrends.com/computing/what-is-ram/" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx long" data-text="Hard Drive">
+				<img src="images/hard-drive.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Hard Disk Drives</h3>
+				<p>A hard drive is one of the most important components of a computer, they give them meaning and are the long-term method to permanently store your data and files that you always want available. Unlike the RAM, hard drives are slower but make up with their high storage capacity and ability to function without power. Hard drives function almost like spinning disks where the data is written to “platters” using a magnetic head. One of the most important uses of the hard drive is that it is what stores your operative system, downloaded softwares and personal files. The hard drive communicates with all parts of the computer while being connected to the motherboard with a SATA cable in order to receive and store the long-term information that the user wants.</p>
+				<h4>How much do I need? How do I compare?</h4>
+				<p>Unlike RAM, hard drives are not necessarily measured on their access speeds, which are slow, but rather the capacity and the more the better. Hard drive storage is measured in bytes; KB, MB, GB, TB. 1024MB=1GB, 1024GB=1TB. It is important to choose reasonably since normal users don’t really have the need for 2 terabytes of space but usually 500GB-1TB is ideal. For casual users who want to store normal programs, pictures and files, 256GB is the best option but if you’re ever unsure, always size up to 500GB - 1 terabyte. For those who use their computers for gaming or design purposes, 1TB-2TB is the best option to store those large programs and files that take up more space than the average user.</p>
+				<h4>Price</h4>
+				<p>Normal HDD drives come cheap even in high storage spaces with a 2TB drive coming as low as $70. More casual capacities like 500GB come in at a similar price of $60.</p>
+				<a href="https://www.digitaltrends.com/computing/what-is-a-hard-drive-your-guide-to-computer-storage/" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx" data-text="SSD">
+				<img src="images/ssd.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Solid-state Drives</h3>
+				<p> SSDs, solid-state drives, are becoming increasingly popular due to their high-performance speeds giving them an advantage over HDD drives. With fast access times and lower latency, SSD is the prime choice for gamers, developers and professionals who can make use of their amazing specifications.</p>
+				<h4>What is the difference between SSD and HDD?</h4>
+				<p>Everything. Not exactly though. Hard disk drives and solid-state drives both store data efficiently but unlike HDD, an SSD has no moving components and that’s where you find the majority of its advantages. Hard disk drives function almost like spinning disks where the data is written to “platters” using a magnetic head. SSDs use flash-based memory which is significantly faster without the obstruction of mechanical parts.</p>
+				<h4>Price and Comparisons</h4>
+				<p>SSDs are usually compared with each other by their maximum transfer rate; the average SSD has a 750MB per second transfer rate with the higher ends reaching 1.5GB per second. With the significantly better specifications, there’s no surprise that SSDs are more expensive than hard disk drives. The average SSD or 500GB has a price of $100 and 1TB drives go for $180-$320.</p>
+				<a href="https://www.avast.com/c-what-is-ssd" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx big-text" data-text="Power Supply">
+				<img src="images/psu.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Power Supply Unit</h3>
+				<p>Commonly referred to as PSU (power supply unit), a power supply is a hardware component that converts power and distributes it amongst all other components. A power supply converts the AC current from your outlet into a low-voltage direct current (DC) that your computer can use. Power supplies need to change the voltage up or down and regulate the power output coming into your computer from the outlet.</p>
+				<h4>How do you choose?</h4>
+				<p>There are many important factors to consider when choosing a power supply, but you just need to determine how much power your new supply needs to output. For those who buy PC laptops, there’s no need to choose a power supply since it comes readily available and tailored to your device. For those with desktops and those who either build or expand them, like gamers, you want to calculate the amount of wattage needed depending on each individual piece of hardware combined. Typically, you want to “size up” to account for expansion. The average PSU has 300-700 watts, again depending, specifically on your computer. More importantly is the efficiency rating which maximizes the power and reduces overheating which damages your computer. There are 6 easy efficiency ratings from Intel (ranging worst to best):<br>80 PLUS<br> 80 PLUS Bronze<br>80 PLUS Silver<br>80 PLUS Gold<br>80 PLUS Platinum<br>80 PLUS Titanium<br>Normal users opt for 400 watt, 80 plus bronze efficiency with a price range of $50 - $70 whereas gaming computers require 1200 watt, 80 plus platinum efficiency with a price range of $120 - $230.</p>
+				<a href="https://www.techspot.com/article/1967-anatomy-psu/" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx big-text" data-text="Graphics Card">
+				<img src="images/graphics-card.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Graphics Cards</h3>
+				<p>A graphics card is the piece of hardware that is responsible for rendering graphics on a computer’s monitor while providing high-quality graphics. A graphics card removes the need for the CPU or RAM to handle the graphic processing functions with its own, built in GPU (graphics processing unit) and RAM. The graphics card is attached to the motherboard via connecting cables and from there it handles all graphics-related processes in the computer. If you’re a casual user, there’s no need for a graphics card since your processor already handles the normal graphics processing functions but high-quality gaming graphics require advanced graphics cards.</p>
+				<h4>How to compare</h4>
+				<p>Comparing graphics cards comes down to the FPS (frames per second) and the response time. The FPS indicated how many frames or pictures your graphics card can process and display at a given second. Normal computers, without a graphics card, have 40-60FPS with gaming computers having graphics card that reach 120+ FPS. Your graphics card needs to work in conjunction with your monitor to ensure that you are maximizing the ability of both graphics. The average graphics card has an FPS of 120-256 and a price of $150-$400 with high end models reaching $700+</p>
+				<a href="https://www.newegg.com/insider/how-to-choose-graphics-card/" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx big-text" data-text="Video Cards">
+				<img src="images/video-card.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Video Cards</h3>
+				<p>Video cards and graphics cards are very similar and there is often no need to buy a video card which is why most users buy a graphics card that can complete the functions of both components with extra features like 3D animations. Video and graphics cards even come with the same measurements and components such as internal GPUs and RAM. Contrary to what some believe, video cards don’t enhance the overall output of graphics cards if they are of the same measurements which is why settling for a better graphics card instead of buying another video card is always ideal.</p>
+				<a href="https://www.techwalla.com/articles/difference-between-video-cards-graphics-cards" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx big-text" data-text="Sound Card">
+				<img src="images/sound-card.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Sound Cards</h3>
+				<p>Sound cards are also not necessarily important for casual users or even gamers, they are mainly for those who produce music or movies and require high-quality internal output capabilities. If you are a casual user, a sound card is unnecessary for your device.</p>
+				<h4>What does it do?</h4>
+				<p>Most computers come with amazing built-in audio systems but, if you’re looking for that extra edge when it comes to sound quality, then a soundcard is for you. It regulates and controls the input/output audio signals in your computer while boosting the maximum output capabilities. It allows you to send audio signals/information to speakers, headphones etc. Sound cards function like graphics cards and are attached to the motherboard and relieve the stress on your computer by handling the audio process itself. When it comes to price, the normal market sound cards start at $40 and go up but most professionals tend to build it themselves or go for the $2,000+.</p>
+				<a href="https://www.computerhope.com/jargon/s/souncard.htm" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx" data-text="Monitors">
+				<img src="images/monitor.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Monitors</h3>
+				<p>A computer monitor is an output hardware component that displays the visual information given to it by the connected computer through a built-in or external graphics/video card. Monitors come in a variety of different sizes, quality, brands and prices. When it comes down to the size, bigger isn’t always better since your monitor choice depends heavily on what you would use it for.</p>
+				<h4>How to compare and what to buy.</h4>
+				<p>There are two main comparisons to look at for a monitor size when buying it for a desktop or the screen size of a laptop.
+					Casual users need a monitor that is big enough to comfortably fit in their workspace with an enhanced readability for short to medium periods of time. If you were going to buy a laptop, you would typically want a 13” - 15.6” inch screen. The stationary desktops always have larger screen sizes, so it comes down to the standard size and the quality of it.
+					<br>
+					Home desktop monitors are usually 21-24 inches wide with a medium-high resolution of 1600x900 pixels or 1920 x 1080px. Resolution is the number of pixels on a screen determining the sharpness and clarity of an image. The more pixels you have on a smaller screen produces a higher quality view however it depends on the concentration of pixels per inch (Dots per inch). Desktop monitors start at $100 with an average of $190 on the higher end models.
+				</p>
+				<a href="https://www.lifewire.com/what-is-a-monitor-2618155" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx" data-text="AUX">
+				<img src="images/auxiliary.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Auxiliary Input/outputs</h3>
+				<p>The auxiliary inputs/outputs of a device are connected to your computer via an auxiliary port (AUX) which is a universal communication port compatible to communicate audio signals for: headphones, earbuds, microphones, speakers and any other audio device. An AUX port gives you the ability to connect those extra analog audio sources to your sound system for. Many come built in with certain computer parts and it's rare that you would need to buy one. When it comes down to their size, an auxiliary input is typically compatible with a 3.5mm audio jack that is common on most headphones and speakers.</p>
+				<a href="https://learn.sonicelectronix.com/consumers-guide-to-auxiliary-inputs/" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx long" data-text="Peripherals">
+				<img src="images/peripherals.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Peripherals</h3>
+				<p>Peripheral devices are also known as auxiliary devices; they are any external components that are plugged into a computer to achieve additional functionality. A peripheral device is either an input device, an output or both. Optical drives are an example on peripheral devices as they are a disk drive that reads and burns data onto disks through ultraviolet light or lasers. While an optical drive can’t read data from a disk, that is left to another device. A DVD burner is an example of a peripheral output device with the ability to burn data onto a disk that can then be read through a DVD player. Optical drives are priced according to their speed of reading/writing data through; since they are disk based, this is determined by rotations per minute. While they are outdated, prices range from $60-$100.</p>
+				<a href="https://www.techopedia.com/definition/2252/peripheral-device" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="imgBx big-text" data-text="Operating Software">
+				<img src="images/os.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Operating System software</h3>
+				<p>Windows, macOS/X, Linux are the most popular operating systems on computers and laptops. The operating system software, commonly known as OS, is the boss of every computer; it is a large system that manages the hardware and programs on a device by giving specific instructions and guidelines on how hardware is supposed to operate. Without an OS, each program you download would have to come with a large amount of its code to dictate how its supposed to operate. An operating system provides the entire overarching instructions on how you interact with your computer and determines what programs can and cannot do. This is achieved with a large number of drivers that are built to fit certain criteria and standards that act as universal instructions for everything including the execution of programs, task management and resource distribution.</p>
+				<h4>Different OS Prices</h4>
+				<p>If you buy an HP laptop, your OS is Windows. A MacBook runs macOS and an iMac runs macOS X. When you buy a computer, the operating system is built in. When you build your own desktop, you need to buy and download the OS from Apple, Windows or Linux with an average price ranging from $139-$199.</p>
+				<a href="https://www.lifewire.com/operating-systems-2625912" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="card buy">
+			<div class="imgBx" data-text="Buy Now">
+				<img src="images/design.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Buy Now</h3>
+				<p>We hope you were able to get a batter understanding of computer hardware now. Check out our amazing new deals and comparison tools on our site today. After learning all the parts in a computer, you are ready to make the right decisions and determine what options are the best for you. Feel free to start browsing or choose a specific comparison type.</p>
+				<a href="explore.html" target="_blank">Explore</a>
+			</div>
+		</div>
+	</div>
+
+	<!--Footer section starts here. The footer, as seen below, is divided into two sections. The first one, given a class of "footer content" holds all the elements while the "copyright" div contains only the copyright.-->
+	<footer>
+		<!--Main footer content begins-->
+		<div class="footer-content">
+			<div class="footer-section map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26395.441820022887!2d-118.44416421218746!3d34.21203158145468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29726f550960b%3A0xc4acc6c59749d306!2sScranton%20Business%20Park!5e0!3m2!1sen!2sca!4v1607456657002!5m2!1sen!2sca" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<!--about section begins-->
+			<div class="footer-section about">
+				<h1 class="name">Novocom</h1>
+				<p>Founded in 2005, Novocom has been serving the Scranton community for 15 years with a dedication to our loyal customers and their experience with us.</p>
+				<div class="contact-info">
+					<span> <i class="fas fa-phone"></i>&nbsp;&nbsp; (613) 668-4690</span>
+					<span><i class="fas fa-envelope"></i>&nbsp;&nbsp; <a href="mailto:novocom69420@gmail.com">novocom69420@gmail.com</a></span>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+			<!--About section ends-->
+
+			<!--Footer Menu begins-->
+			<div class="footer-section directory">
+				<h2>Quick Access</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="compare.html">Compare</a></li>
+					<li><a href="price.html">Price</a></li>
+					<li><a href="type.html">Type</a></li>
+					<li><a href="user.html">User</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<!--Footer Menu ends-->
+		</div>
+		<!--Main footer content ends-->
+
+		<!--Copyright section begins. Instead of using a font-awesome class symbol, standard HTML hex symbol is used-->
+		<div class="copyright">
+			&copy;Novocom | Designed by Majd Al-Aarg
+		</div>
+		<!--copyright section ends-->
+
+	</footer>
+	<!--Footer section ends here-->
+	<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Compare Price | Novocom</title>
+	<link rel="stylesheet" href="price.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<!--The following button is for the back-top-button that is codeed with @keyframe CSS animations and Java Script-->
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+	<div class="container">
+		<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+		<header>
+			<img class="logo" src="images/logo.png" href="index.html">
+			<nav>
+				<ul class="nav-links">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="explore.html">Explore</a></li>
+					<li class="dropdown nav-item">
+						<a href="compare.html" class="dropbtn">Compare</a>
+						<div class="dropdown-content">
+							<a href="price.html">Price</a>
+							<a href="type.html">Type</a>
+							<a href="user.html">User</a>
+						</div>
+					</li>
+				</ul>
+				<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+				<a class="cta" href="contact.html"><button>Contact</button></a>
+			</nav>
+
+			<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+			<a class="menu cta"><button>Menu</button></a>
+		</header>
+		<div class="overlay">
+			<a class="close">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="explore.html">Explore</a>
+				<li class="dropdown">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.htm">User</a>
+					</div>
+				</li>
+				<a href="contact.html">Contact</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+		<!--Responsive, mobile navigation elements end-->
+		<!--Navbar elements end-->
+		<!--Header section ends-->
+
+
+		<!--Homepage/body section begins-->
+		<!--the following code is for the main header at the top of the page containing some images and brief text-->
+		<div class="header">
+			<div class="split">
+				<h3>Comparing by Price</h3>
+				
+				<!--The following code is for the image slideshow located in the left section of the split header container-->
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<img src="images/price-slideshow1.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/price-slideshow2.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/price-slideshow3.jpg" style="width:70%">
+					</div>
+
+				</div>
+				<br>
+				<div style="text-align:center">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<!--Slideshow container ends-->
+			</div>
+			<!--Left side of header container ends-->
+			
+			<!--Right side of header container begins-->
+			<div class="split">
+				<p>Cost plays a key role when looking to purchase a new computer; depending on your preferences, you might be looking for a higher-end model or a cheaper option. Nonetheless, it's important to determine a price range before looking for computers to get the best option for you. You can buy a computer for anywhere from $299 to $5,000 or more, depending on your budget and computing needs.</p>
+				<p>At Novocom, we understand how difficult it is to break down computers and compare them by price. Here, we do it for you. Check out our top choices for each price range and determine which one best suits your needs. We've included 3 of the best available HP PCs that fit into three different price ranges so that you can easily compare the features and determine the best choice.</p>
+			</div>
+			<!--Right side of header container ends-->
+		</div>
+		<!--Main header container ends here-->
+	</div>
+	
+	
+	<!--The following div class is the main container of the page aside from the header and the footer. By putting it into a seperate class, it becomes easier to seperate the design elements later on in the CSS-->
+	<div class="container2">
+		<table class="compare">
+			<tr class="picture-row">
+				<!--The following 3 in-line styles are the only set within the code for ease-of-access and change to the cell background-->
+				<td style="width: 25%; background: #fcfcfc;"><img src="images/price.png" width="10px"></td>
+				<td style="background: #fcfcfc;"><img src="images/hp-price.png"></td>
+				<td style="background: #fcfcfc;"><img src="images/hp-price2.png"></td>
+				<td style="background: #fcfcfc;"><img src="images/hp-price3.png"></td>
+			</tr>
+			<tr>
+				<th>Model</th>
+				<th>HP EliteBook</th>
+				<th>HP Spectre</th>
+				<th>HP Pavilion</th>
+			</tr>
+			<tr>
+				<th>Price Range</th>
+				<th>High</th>
+				<th>Average</th>
+				<th>Low</th>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>$2,199.00</td>
+				<td>$1,124.99</td>
+				<td>$499.99</td>
+			</tr>
+			<tr>
+				<td>Operating System</td>
+				<td>Windows 10 Pro</td>
+				<td>Windows 10 Home</td>
+				<td>Windows 10 Home</td>
+			</tr>
+			<tr>
+				<td>CPU Model</td>
+				<td>Intel® Core™ i7</td>
+				<td>10th Gen Intel® Core™ i5</td>
+				<td>10th Gen Intel® Core™ i3</td>
+			</tr>
+			<tr>
+				<td>Processor Speed</td>
+				<td>1.8 GHz quad-core (Base)</td>
+				<td>1.1 GHz dual-core (Base)</td>
+				<td>1.2 GHz one-core (Base)</td>
+			</tr>
+			<tr>
+				<td>RAM Storage</td>
+				<td>8GB DDR4</td>
+				<td>8GB DDR4</td>
+				<td>8GB DDR4</td>
+			</tr>
+			<tr>
+				<td>Storage Type</td>
+				<td>SSD (Solid State Drive)</td>
+				<td>SSD (Solid State Drive)</td>
+				<td>SSD (Solid State Drive)</td>
+			</tr>
+			<tr>
+				<td>Hard Drive Capacity</td>
+				<td>256GB</td>
+				<td>256GB</td>
+				<td>128GB</td>
+			</tr>
+			<tr>
+				<td>Video/Graphics Card</td>
+				<td>Intel® UHD Graphics 620</td>
+				<td>Intel Iris Plus Graphics</td>
+				<td>Intel UHD Graphics</td>
+			</tr>
+			<tr>
+				<td>Audio Card/Output</td>
+				<td>Stereo speakers, integrated microphone</td>
+				<td>Stereo speakers, integrated microphone</td>
+				<td>Stereo speakers, integrated microphone</td>
+			</tr>
+			<tr>
+				<td>Monitor</td>
+				<td>15.6" 1,920 x 1,080 (FHD)</td>
+				<td>13.3" 3840 x 2160 (4K)</td>
+				<td>14" 1366 x 768 (HD)</td>
+			</tr>
+			<tr>
+				<td>AUX Ports</td>
+				<td>3.5 mm headphone jack</td>
+				<td>3.5 mm headphone jack</td>
+				<td>3.5 mm headphone jack</td>
+			</tr>
+			<tr>
+				<td>Optical Drive</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>Ports</td>
+				<td>2 USB, 1 USB-C</td>
+				<td>3 USB, 2 USB-C</td>
+				<td>2 USB, 1 USB-C</td>
+			</tr>
+			<tr>
+				<td>Power Supply</td>
+				<td>HP Smart 65 W</td>
+				<td>HP Smart 65 W </td>
+				<td>Lithium Ion</td>
+			</tr>
+			<tr>
+				<td>Cooling</td>
+				<td>Internal Fan (single)</td>
+				<td>Internal Fan (single)</td>
+				<td>Internal Fan (single)</td>
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td>3.9lb</td>
+				<td>2.87lb</td>
+				<td>3.55lb</td>
+			</tr>
+		</table>
+	</div>
+	<!--Footer section starts here. The footer, as seen below, is divided into two sections. The first one, given a class of "footer content" holds all the elements while the "copyright" div contains only the copyright.-->
+	<footer>
+		<!--Main footer content begins-->
+		<div class="footer-content">
+			<div class="footer-section map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26395.441820022887!2d-118.44416421218746!3d34.21203158145468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29726f550960b%3A0xc4acc6c59749d306!2sScranton%20Business%20Park!5e0!3m2!1sen!2sca!4v1607456657002!5m2!1sen!2sca" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<!--about section begins-->
+			<div class="footer-section about">
+				<h1 class="name">Novocom</h1>
+				<p>Founded in 2005, Novocom has been serving the Scranton community for 15 years with a dedication to our loyal customers and their experience with us.</p>
+				<div class="contact-info">
+					<span> <i class="fas fa-phone"></i>&nbsp;&nbsp; (613) 668-4690</span>
+					<span><i class="fas fa-envelope"></i>&nbsp;&nbsp; <a href="mailto:novocom69420@gmail.com">novocom69420@gmail.com</a></span>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+			<!--About section ends-->
+
+			<!--Footer Menu begins-->
+			<div class="footer-section directory">
+				<h2>Quick Access</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="compare.html">Compare</a></li>
+					<li><a href="price.html">Price</a></li>
+					<li><a href="type.html">Type</a></li>
+					<li><a href="user.html">User</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<!--Footer Menu ends-->
+		</div>
+		<!--Main footer content ends-->
+
+		<!--Copyright section begins. Instead of using a font-awesome class symbol, standard HTML hex symbol is used-->
+		<div class="copyright">
+			&copy;Novocom | Designed by Majd Al-Aarg
+		</div>
+		<!--copyright section ends-->
+
+	</footer>
+	<!--Footer section ends here-->
+	<script src="script.js"></script>
+</body></html>

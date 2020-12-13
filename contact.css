@@ -1,0 +1,870 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+@font-face {
+	font-family: Lemonmilk;
+	src: url(fonts/lemonmilk.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+/*Smooth scroll declaration*/
+html {
+	scroll-behavior: smooth;
+}
+
+/*Smooth scroll ends*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 450;
+}
+
+
+/*The following code is for the back-to-top button. It sets the visual properties of the button as well as sets certain transition times. Media queries are included to continue the responsive design of page.*/
+#back-to-top-btn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 28px;
+	width: 55px;
+	height: 55px;
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	outline: none;
+	border: 3px solid #333;
+	border-radius: 50%;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	z-index: 999;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+	background-color: #333;
+	color: #fff;
+}
+
+@media(max-width: 992px) {
+	#back-to-top-btn {
+		font-size: 22px;
+		width: 45px;
+		height: 45px;
+		bottom: 15px;
+		right: 15px;
+	}
+}
+
+@media(max-width:768px) {
+	#back-to-top-btn {
+		font-size: 18px;
+		width: 32px;
+		height: 32px;
+		bottom: 6px;
+		right: 6px;
+	}
+}
+
+/* The following animations are given under the class of .btnEntrance which toggled with a Java Script event listener. It sets the animation for the button entrance upon the scroll to the given heigt. @keyframe selector is used for enhanced animation. The button's exit is animated and coded under similair pretenses under the class of .btnExit.*/
+.btnEntrance {
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+	animation-name: btnEntrance;
+}
+
+/* Fade in, opacity animation from and to.*/
+@keyframes btnEntrance {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.btnExit {
+	animation-duration: 0.25s;
+	animation-fill-mode: both;
+	animation-name: btnExit;
+}
+
+/* Button exit code, fade down*/
+@keyframes btnExit {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+/*Back to top button ends here*/
+
+/*The following 250 lines of code are for the Navbar Properties, including the header*/
+
+/*The following attributes, given to the list items, links, and button elements, act as the overarching style for the nav bar. In order to achieve a consistent look while maintaining "efficiency" in the code, the elements have been grouped together.*/
+
+li,
+a,
+button {
+	font-family: font-family: 'PT Sans', sans-serif;
+	;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: aliceblue;
+
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 5% 0 5%;
+	align-items: center;
+	background-color: #2b2b2b;
+}
+
+
+/*The followign properties are standard attributes given to the navigation bar and its links in order to achieve the nav bar design. Certain properties are given transition properties for the animation to create a user interactive design*/
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	cursor: pointer;
+	height: 70%;
+	width: auto;
+}
+
+
+/*The following section is for the nav links. The defauly properties are altered to achieve the nav-bar design. Furthermore, halfway through the section, the "nav-links" are given properties under their hoevr state that act as animations that occur upon hover.*/
+.nav-links {
+	list-style: none;
+	margin-right: 1.4rem;
+}
+
+.nav-links li {
+	display: inline-block;
+	padding: 0.4rem 1rem;
+}
+
+nav ul li a {
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #fff;
+	margin: 0 10px;
+}
+
+nav ul li a {
+	position: relative;
+	z-index: 1;
+}
+
+/*The following attributes are given to the drop down elements in the HTML under the classes of "dropdown" and "dropdown-content." They are given all the necessary properties needed to achieve the dropdown navbar format.*/
+.dropdown {
+	list-style: none;
+	text-align: center;
+	transition: all .5s;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(28, 28, 28, 0.925);
+	width: 6.8rem;
+}
+
+.dropdown-content a {
+	color: black;
+	background-color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/*The following section is for the animation of the nav-links upon hover. As seen several lines down, the default view of the "box" is set to transparent. All properties given in the ":after" state are made visible in the ":hover" under the visibility property. The @media query below is used in media queries to apply nav-link box animations only when the screen is larger than 768. Further down, a media query will be used to make a hidden, toggle-only nav bar for smaller devices.*/
+@media only screen and (min-width: 768px) {
+
+	nav ul li a,
+	nav ul li a:after,
+	nav ul li a:before {
+		transition: all .5s;
+	}
+
+	nav-item:hover {
+		color: white;
+	}
+
+	nav ul li a:after {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 100%;
+		height: 1px;
+		content: '';
+		color: transparent;
+		background: #7d8ca3;
+		visibility: none;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	nav ul li a:hover:after {
+		opacity: 1;
+		visibility: visible;
+		height: 100%;
+		border-radius: 3px;
+	}
+}
+
+/*Nav-links hover animation ends*/
+
+/*The following properties are given to the buttons in the navbar in order to differentiate between the other links. The properties achieve a button-like look that's offset from the rest.*/
+button {
+	padding: 0.3rem;
+	margin-right: 1rem;
+	width: 6em;
+	background-color: #009090;
+	border: none;
+	border-radius: 4rem;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+button:hover {
+	background-color: rgba(0, 136, 169, .5);
+	transform: scale(1.1);
+}
+
+/*Button properties end*/
+
+
+/*The following section contains the CSS properties for the responsive menu that is displayed with a media query attribute set to "max-width (768)". The responsive deisgn improves the User Interactivity for Mobile or Tablet users and displays a level of depth to the development.*/
+.menu {
+	display: none;
+}
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1000000;
+	left: 0;
+	top: 0;
+	background-color: #24252a;
+	overflow-x: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+	width: 100%;
+}
+
+.overlay-content {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay a {
+	padding: 15px;
+	font-size: 36px;
+	display: block;
+	transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #0088a9;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: #edf0f1;
+	cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+
+	.overlay .close {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+/*The following media query toggles the mobile navigation elements and properties on devices with a display of < 768*/
+@media only screen and (max-width: 1000px) {
+
+	.nav-links,
+	.cta {
+		display: none;
+	}
+
+	.menu {
+		display: initial;
+	}
+}
+
+/*Mobile Navigation properties end*/
+/*Navbar properties end*/
+/*Header properties end*/
+
+/*Main body properties begin*/
+/*Header Begins. This includes the slideshow style attributes and main hdeader container container properties.*/
+.header {
+	background: url(images/background.png);
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	max-width: 100%;
+}
+
+.split {
+	width: 50%;
+	text-align: center;
+	padding: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.split {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+}
+
+.header .split h3 {
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 2rem;
+	padding-bottom: 30px;
+	font-weight: 500;
+}
+
+.header .split p {
+	text-align: left;
+	line-height: 1.5;
+	margin: 2rem;
+	margin-top: 10%;
+	color: #FFFFFF;
+	font-size: 1.05vw;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (max-width: 1600px) {
+	.header .split p {
+		font-size: 16px;
+	}
+}
+
+/*Slideshow properties begin here*/
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	height: 0.5rem;
+	width: 2rem;
+	margin: 0 2px;
+	background-color: #bbb;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #717171;
+}
+
+/* The following code is for the animations that are achieved throuhg giving the animation a "class/webkit name" and then using CSS keyframes for the code*/
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: .5s;
+	animation-name: fade;
+	animation-duration: .5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+/*Animations end here*/
+/*Media query to decrease text size begins here*/
+@media only screen and (max-width: 300px) {
+	.text {
+		font-size: 11px
+	}
+}
+
+/*Media query ends here*/
+/*Slideshow properties end here*/
+
+/*Header properties end here*/
+
+
+/*Contact form begins*/
+/*The following properties are for the entire form section of the page*/
+section {
+	padding-left: 25vw;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	position: relative;
+	min-height: 100px;
+	background: #112d42;
+}
+
+section .container {
+	position: relative;
+	width: 50vw;
+	height: 1000px;
+	display: flex;
+	z-index: 1000;
+}
+
+@media only screen and (max-width: 1000px) {
+	section {
+		padding: 0;
+		height: 1200px;
+		width: 100%;
+
+	}
+
+	section .container {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1520px) {
+	section .container {
+		width: 70vw;
+	}
+
+	section {
+		padding-left: 15vw;
+	}
+}
+
+/*Actual form content properties begin*/
+section .container .contactForm {
+	align-items: center;
+	position: absolute;
+	padding: 70px;
+	background: #fcfcfc;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, .5);
+}
+
+section .container .contactForm h2 {
+	color: #0f3959;
+	padding-bottom: 20px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+section .container .contactForm .formBox {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 25px;
+}
+
+/*Text input BOX properties begin*/
+section .container .contactForm .inputBox {
+	position: relative;
+	margin: 0 0 35px 0;
+}
+
+section .container .contactForm .inputBox.w50 {
+	width: 40%;
+}
+
+section .container .contactForm .inputBox.w100 {
+	width: 100%;
+}
+
+section .container .contactForm .inputBox input {
+	width: 100%;
+	background-color: #fcfcfc;
+	padding: 5px 0;
+	font-size: 18px;
+	font-weight: 400;
+	resize: none;
+	color: #333;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+#email_input {
+	padding-top: 10px;
+}
+
+section .container .contactForm .inputBox textarea {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 18px;
+	font-weight: 400;
+	background: #fcfcfc;
+	color: #333;
+	border: none;
+	resize: none;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+section .container .contactForm .inputBox textarea {
+	min-height: 110px;
+}
+
+.review {
+	padding-top: 30px;
+}
+
+/*Input BOX properties end*/
+
+/*The following proeprties are for the TEXT input LABELS*/
+section .container .contactForm .inputBox label {
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	color: black;
+	transition: .4s
+}
+
+/*Text input label properties end*/
+
+
+/*The following table properties are for the radio, dropdown, checkbox, button form elements that are placed into tables for ease of formatting.*/
+table {
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+td {
+	width: 60%;
+	padding-bottom: 15px;
+}
+
+/*Radio, dropdown, checkbox, button properties end*/
+
+
+/*Input Animation begins*/
+/*The following code achieves an animation like effect when the input areas are clicked on. Given to the input class is the vocus state, as well as the valid state, ensuring that if given a valid input or clicked on, the following properties are given to the labels. Given these states, the label will translate up, change color and become smaller. The code is repeated for the <textarea> inputs as well.*/
+section .container .contactForm .inputBox input:focus ~ label,
+section .container .contactForm .inputBox input:valid ~ label {
+	transform: translateY(-20px);
+	font-size: 14px;
+	font-weight: 700;
+	color: #009090;
+}
+
+section .container .contactForm .inputBox textarea:focus ~ label {
+	transform: translateY(-20px);
+	font-size: 14px;
+	font-weight: 700;
+	color: #009090;
+}
+
+/*Input Animation ends*/
+
+/*Properties for the submit button are given below*/
+section .container .contactForm .inputBox input[type="submit"] {
+	position: relative;
+	cursor: pointer;
+	background: #009090;
+	border: none;
+	color: white;
+	width: 10rem;
+	border-radius: 5px;
+	transition: all .4s;
+}
+
+section .container .contactForm .inputBox input[type="submit"]:hover {
+	background: #24252a;
+}
+
+/*Button properties end*/
+/*Form properties end*/
+/*Form container properties end*/
+
+
+
+/*The following properties are for the FAQ section of the page. The attributes create the style for the accordion button and body.*/
+.faq {
+	padding: 10vh 20vw;
+}
+
+.faq h1,
+.faq h3 {
+	font-weight: 500;
+}
+
+.faq h1 {
+	text-align: center;
+}
+
+.faq h3 {
+	padding: 30px 0;
+}
+
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 20px;
+	transition: 0.4s;
+}
+
+/*The following property sets the hover state of the accordion button*/
+.active,
+.accordion:hover {
+	background-color: #ccc;
+}
+
+/*Accordion button hover state ends*/
+
+
+/*The ::after selector inserts the "+" symbol after the content of the "accordion" class which contains the title. It's been given a float right so that it always remain on the right*/
+.accordion:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+}
+
+.active:after {
+	content: "\2212";
+}
+
+/*.active properties end*/
+
+/*The following properties are for the class of "panel" that contains the answer to the questions*/
+
+.panel {
+	margin: .5vw;
+	padding: 0 20px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+	font-size: 16px;
+}
+
+/*Panel properties end*/
+/*Accordion Properties end*/
+/*Main body elements end*/
+
+
+
+
+/*Footer properties begin. Footer is given a relative position and bottom: 0 in order to ensure that it sticks to the bottom.*/
+footer {
+	background: #112d42;
+	color: white;
+	min-height: 400px;
+	position: relative;
+	bottom: 0;
+
+
+}
+
+.footer-content {
+	display: flex;
+	vertical-align: bottom;
+	margin: 20px;
+	padding-top: 1vw;
+	white-space: normal;
+	position: relative;
+	white-space: nowrap;
+}
+
+.footer-section {
+	padding: 30px;
+	height: 100%;
+}
+
+.map {
+	width: 30%;
+	height: 20em;
+	white-space: normal;
+}
+
+.about {
+	width: 40%;
+	white-space: normal;
+}
+
+.name {
+	font-family: Lemonmilk;
+}
+
+.about p {
+	font-weight: 300;
+	font-size: 15px;
+	padding: 10px 10px 20px 0px;
+}
+
+.contact-info span {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+}
+
+.fas {
+	font-size: 1.1em;
+	padding-top: .2em;
+}
+
+.social .fab {
+	font-size: 1.5rem;
+	padding-right: 15px;
+}
+
+.social {
+	padding: 10px;
+}
+
+.directory {
+	padding-left: 10%;
+	white-space: normal;
+}
+
+.directory ul {
+	padding-top: 10px;
+}
+
+.directory a {
+	display: flex;
+	padding-bottom: 6px;
+	padding-left: 10px;
+}
+
+.directory li {
+	list-style-type: none;
+	transition: all .7s ease-in-out;
+}
+
+.directory li:hover {
+	transform: translateX(40px);
+}
+
+.submit {
+	position: relative;
+	cursor: pointer;
+	background: #009090;
+	border: none;
+	color: white;
+	width: 10rem;
+	border-radius: 5px;
+	transition: all .4s;
+}
+
+.copyright {
+	background: #14142e;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	overflow: hidden;
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 1000px) {
+	.footer-content {
+		flex-direction: column;
+	}
+
+	.footer-section {
+		width: 100%;
+	}
+
+	.directory {
+		padding: 0 30px;
+		padding-bottom: 5em
+	}
+}
+
+/*Footer properties end*/

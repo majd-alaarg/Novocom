@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Novocom</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<div class="container">
+		<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+		<header>
+			<img class="logo" src="images/logo.png" href="index.html">
+			<nav>
+				<ul class="nav-links">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="explore.html">Explore</a></li>
+					<li class="dropdown nav-item">
+						<a href="compare.html" class="dropbtn">Compare</a>
+						<div class="dropdown-content">
+							<a href="price.html">Price</a>
+							<a href="type.html">Type</a>
+							<a href="user.html">User</a>
+						</div>
+					</li>
+				</ul>
+				<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+				<a class="cta" href="contact.html"><button>Contact</button></a>
+			</nav>
+
+			<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+			<a class="menu cta"><button>Menu</button></a>
+		</header>
+		<div class="overlay">
+			<a class="close">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="explore.html">Explore</a>
+				<li class="dropdown">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.htm">User</a>
+					</div>
+				</li>
+				<a href="contact.html">Contact</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+		<!--Responsive, mobile navigation elements end-->
+		<!--Navbar elements end-->
+		<!--Header section ends-->
+
+		<!--Homepage/body section begins-->
+		<div class="main-container">
+			<div class="text-left">
+				<div class="search">
+					<i class="fas fa-search"></i>
+					<input type="text">
+				</div>
+				<!--The following line acts a break between the search bar and the text-->
+				<hr>
+				<!--The main text/body of the home page starts-->
+				<h1>Welcome to<br> Novocom</h1>
+				<p>Our vision is to provide technology that makes life better for everyone, everywhere. This is what motivates Novocom and inspires us to do what we do. We believe we can provide customers with more powerful technology at a better value. We keep our costs low - because every penny we save is a penny you save. We just focus on what matters: great products + excellent customer service = Novocom.</p>
+				<!--The main text/body of the home page ends-->
+			</div>
+			<div class="img-right">
+				<img class="img" src="images/image.png" alt="">
+			</div>
+			<div class="social-media-icons">
+				<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			</div>
+		</div>
+		<!--Homepage/body section ends-->
+
+
+		<script src="script.js"></script>
+	</div>
+</body></html>

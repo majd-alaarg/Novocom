@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Compare Type | Novocom</title>
+	<link rel="stylesheet" href="explore.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<!--The following button is for the back-top-button that is codeed with @keyframe CSS animations and Java Script-->
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+	<div class="container">
+		<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+		<header>
+			<img class="logo" src="images/logo.png">
+			<nav>
+				<ul class="nav-links">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="explore.html">Explore</a></li>
+					<li class="dropdown nav-item">
+						<a href="compare.html" class="dropbtn">Compare</a>
+						<div class="dropdown-content">
+							<a href="price.html">Price</a>
+							<a href="type.html">Type</a>
+							<a href="user.html">User</a>
+						</div>
+					</li>
+				</ul>
+				<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+				<a class="cta" href="contact.html"><button>Contact</button></a>
+			</nav>
+
+			<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+			<a class="menu cta"><button>Menu</button></a>
+		</header>
+		<div class="overlay">
+			<a class="close">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="explore.html">Explore</a>
+				<li class="dropdown">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.htm">User</a>
+					</div>
+				</li>
+				<a href="contact.html">Contact</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+		<!--Responsive, mobile navigation elements end-->
+		<!--Navbar elements end-->
+		<!--Header section ends-->
+	</div>
+	<!--Homepage/body section begins-->
+	<!--the following code is for the responsive video landing page. All attributes are given in the CSS file-->
+	<div class="bg-video-wrap">
+		<video src="images/mac-intro2.mp4" autoplay>
+		</video>
+		<div class="overlay2"></div>
+		<h1 class="vid-header">Explore Our Products<br>
+			<a href="#container2">Take Me</a>
+		</h1>
+	</div>
+	<!--Main header container ends here-->
+
+
+	<!--The following div class is the main container of the page aside from the header and the footer. By putting it into a seperate class, it becomes easier to seperate the design elements later on in the CSS-->
+	<div class="container2" id="container2">
+		<div class="card">
+			<div class="img-box">
+				<img src="images/imac-type.png">
+			</div>
+			<div class="content-box">
+				<h3>iMac 2020 27" 10TH GEN</h3>
+				<h2 class="price">$2,399.00</h2>
+				<a href="https://www.apple.com/ca/shop/buy-mac/imac/27-inch-3.1ghz-6-core-processor-with-turbo-boost-up-to-4.5ghz-256gb#" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="images/hp-type.png">
+			</div>
+			<div class="content-box">
+				<h3>HP ProBook 430 G7</h3>
+				<h2 class="price">$1,269.00</h2>
+				<a href="https://store.hp.com/CanadaStore/Merch/Product.aspx?id=8VC88UT&opt=ABA&sel=NTB" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="images/chromebook-type.png">
+			</div>
+			<div class="content-box">
+				<h3>ASUS Flip C434TA</h3>
+				<h2 class="price">$549.99</h2>
+				<a href="https://www.thesource.ca/en-ca/computers-tablets/laptops/chromebooks/asus-flip-c434ta-dsm4t-14%e2%80%9d-touchscreen-chromebook-with-intel%c2%ae-m3-8100y%2c-64gb-emmc%2c-4gb-ram-chrome-os---silver/p/108081808" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="images/hp-price.png">
+			</div>
+			<div class="content-box">
+				<h3>HP EliteBook 850 G6</h3>
+				<h2 class="price">$2,199.00</h2>
+				<a href="https://store.hp.com/CanadaStore/Merch/Product.aspx?id=7KK07UT&opt=ABA&sel=NTB" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="images/hp-price2.png">
+			</div>
+			<div class="content-box">
+				<h3>HP Spectre x360</h3>
+				<h2 class="price">$1,249.99</h2>
+				<a href="https://www.bestbuy.com/site/hp-spectre-x360-2-in-1-13-3-4k-ultra-hd-touch-screen-laptop-intel-core-i5-8gb-memory-256gb-ssd-natural-silver/6402916.p?skuId=6402916" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="images/hp-price3.png">
+			</div>
+			<div class="content-box">
+				<h3>HP Pavilion x360</h3>
+				<h2 class="price">$499.99</h2>
+				<a href="https://www.bestbuy.com/site/hp-pavilion-x360-2-in-1-14-touch-screen-laptop-intel-core-i3-8gb-memory-128gb-ssd-natural-silver/6405054.p?skuId=6405054" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box big">
+				<img src="images/designer-user2.png">
+			</div>
+			<div class="content-box">
+				<h3>XPS Desktop Special Edition</h3>
+				<h2 class="price">$2,929.99</h2>
+				<a href="https://www.dell.com/en-us/shop/cty/pdp/spd/xps-8940-desktop/xd8940se071h?cartitemid=fbe2d239-6826-4370-ac01-b9536a15184c&ref=carconfigedittitle&configurationid=d5ea8830-c817-47d0-81f9-d0853a619147" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box big">
+				<img src="images/gaming-user2.png">
+			</div>
+			<div class="content-box">
+				<h3>ALIENWARE AURORA R11</h3>
+				<h2 class="price">$2,399.99</h2>
+				<a href="https://www.dell.com/en-ca/shop/cty/pdp/spd/alienware-aurora-r11-desktop/daar11_s55e?cartitemid=c7ae010e-1f79-470e-a1fd-f31aadc6e7a5&ref=carconfigedittitle&configurationid=5b2fddd4-2c35-4316-95e8-f2813d5b0387" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box big">
+				<img src="images/student-user2.png">
+			</div>
+			<div class="content-box">
+				<h3>Inspiron Desktop i3</h3>
+				<h2 class="price">$599.99</h2>
+				<a href="https://www.dell.com/en-ca/shop/desktops/inspiron-desktop/spd/inspiron-3880-desktop/di3880_s218pe" target="_blank" class="buy">Buy Now</a>
+			</div>
+		</div>
+	</div>
+	<!--Footer section starts here. The footer, as seen below, is divided into two sections. The first one, given a class of "footer content" holds all the elements while the "copyright" div contains only the copyright.-->
+	<footer>
+		<!--Main footer content begins-->
+		<div class="footer-content">
+			<div class="footer-section map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26395.441820022887!2d-118.44416421218746!3d34.21203158145468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29726f550960b%3A0xc4acc6c59749d306!2sScranton%20Business%20Park!5e0!3m2!1sen!2sca!4v1607456657002!5m2!1sen!2sca" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<!--about section begins-->
+			<div class="footer-section about">
+				<h1 class="name">Novocom</h1>
+				<p>Founded in 2005, Novocom has been serving the Scranton community for 15 years with a dedication to our loyal customers and their experience with us.</p>
+				<div class="contact-info">
+					<span> <i class="fas fa-phone"></i>&nbsp;&nbsp; (613) 668-4690</span>
+					<span><i class="fas fa-envelope"></i>&nbsp;&nbsp; <a href="mailto:novocom69420@gmail.com">novocom69420@gmail.com</a></span>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+			<!--About section ends-->
+
+			<!--Footer Menu begins-->
+			<div class="footer-section directory">
+				<h2>Quick Access</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="compare.html">Compare</a></li>
+					<li><a href="price.html">Price</a></li>
+					<li><a href="type.html">Type</a></li>
+					<li><a href="user.html">User</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<!--Footer Menu ends-->
+		</div>
+		<!--Main footer content ends-->
+
+		<!--Copyright section begins. Instead of using a font-awesome class symbol, standard HTML hex symbol is used-->
+		<div class="copyright">
+			&copy;Novocom | Designed by Majd Al-Aarg
+		</div>
+		<!--copyright section ends-->
+
+	</footer>
+	<!--Footer section ends here-->
+	<script src="script.js"></script>
+</body>
+
+</html>

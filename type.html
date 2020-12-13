@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Compare Type | Novocom</title>
+	<link rel="stylesheet" href="type.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<!--The following button is for the back-top-button that is codeed with @keyframe CSS animations and Java Script-->
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+	<div class="container">
+		<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+		<header>
+		<img class="logo" src="images/logo.png">
+			<nav>
+				<ul class="nav-links">
+					<li class="nav-item"><a href="index.html">Home</a></li>
+					<li class="nav-item"><a href="explore.html">Explore</a></li>
+					<li class="dropdown nav-item">
+						<a href="compare.html" class="dropbtn">Compare</a>
+						<div class="dropdown-content">
+							<a href="price.html">Price</a>
+							<a href="type.html">Type</a>
+							<a href="user.html">User</a>
+						</div>
+					</li>
+				</ul>
+				<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+				<a class="cta" href="contact.html"><button>Contact</button></a>
+			</nav>
+
+			<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+			<a class="menu cta"><button>Menu</button></a>
+		</header>
+		<div class="overlay">
+			<a class="close">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="explore.html">Explore</a>
+				<li class="dropdown">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.htm">User</a>
+					</div>
+				</li>
+				<a href="contact.html">Contact</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+		<!--Responsive, mobile navigation elements end-->
+		<!--Navbar elements end-->
+		<!--Header section ends-->
+
+
+		<!--Homepage/body section begins-->
+		<!--the following code is for the main header at the top of the page containing some images and brief text-->
+		<div class="header">
+			<div class="split">
+				<h3>Comparing by Type</h3>
+				
+				<!--The following code is for the image slideshow located in the left section of the split header container-->
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<img src="images/type-slideshow1.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/type-slideshow2.jpg" style="width:70%">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="images/type-slideshow3.jpg" style="width:70%">
+					</div>
+
+				</div>
+				<br>
+				<div style="text-align:center">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<!--Slideshow container ends-->
+			</div>
+			<!--Left side of header container ends-->
+			
+			<!--Right side of header container begins-->
+			<div class="split">
+				<p>When you choose a computer, you want to choose a type that best suits your need with regards to its software capabilities, efficiency, average power, maintenance and portability. There are 3 types of computers that vary with regards to that set of criteria: Macs, PCs and Chromebooks; all of whom have general attributes that make them ideal for different types of users. Here, we'll look at three different computers that fall into each type.</p>
+				<p>A Mac is the ideal type of computer for graphic designers, editors or things that take up large amounts of RAM and need high graphics capabilities. Also, Macs are naturally compatible with Adobe softwares that are tailored to the computer making them run more efficiently. PCs are great home computers. With relatively high specifications, workspace compatibility, and large amounts of storage, it is great for casual use, some games and work. Chromebooks are the more light-weight, student-built computers with their capabilities being limited but that doesn't stop them from being light-weight, portable and versatile.</p>
+			</div>
+			<!--Right side of header container ends-->
+		</div>
+		<!--Main header container ends here-->
+	</div>
+	
+	
+	<!--The following div class is the main container of the page aside from the header and the footer. By putting it into a seperate class, it becomes easier to seperate the design elements later on in the CSS-->
+	<div class="container2">
+		<table class="compare">
+			<tr class="picture-row">
+				<!--The following 3 in-line styles are the only set within the code for ease-of-access and change to the cell background-->
+				<td style="width: 25%;background: #fcfcfc;"><img src="images/type.png"></td>
+				<td style="background: #fcfcfc;"><img src="images/imac-type.png"></td>
+				<td style="background: #fcfcfc;"><img src="images/hp-type.png"></td>
+				<td style="background: #fcfcfc;"><img src="images/chromebook-type.png"></td>
+			</tr>
+			<tr>
+				<th>Type</th>
+				<th>iMac</th>
+				<th>PC</th>
+				<th>Chromebook</th>
+			</tr>
+			<tr>
+				<th>Model</th>
+				<th>iMac 2020 10th Gen Intel®</th>
+				<th>HP ProBook Notebook PC</th>
+				<th>ASUS Flip Chromebook</th>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>$2,399.00</td>
+				<td>$1,269.00</td>
+				<td>$549.99</td>
+			</tr>
+			<tr>
+				<td>Operating System</td>
+				<td>macOS</td>
+				<td>Windows 10 Pro</td>
+				<td>Chrome OS</td>
+			</tr>
+			<tr>
+				<td>CPU Model</td>
+				<td>10th Gen Intel® Core i5</td>
+				<td>10th Gen Intel® Core i5</td>
+				<td>Intel® Core™</td>
+			</tr>
+			<tr>
+				<td>Processor Speed</td>
+				<td>3.1GHz 6‑core</td>
+				<td>4.2GHz quad-core</td>
+				<td>1.1GHz dual-core</td>
+			</tr>
+			<tr>
+				<td>RAM Storage</td>
+				<td>8GB DDR4</td>
+				<td>8GB DDR4</td>
+				<td>4GB DDR4</td>
+			</tr>
+			<tr>
+				<td>RAM Memory Speed</td>
+				<td>2666 MHz</td>
+				<td>2400 MHz</td>
+				<td>1600 MHz</td>
+			</tr>
+			<tr>
+				<td>Storage Type</td>
+				<td>SSD (Solid State Drive)</td>
+				<td>SSD (Solid State Drive)</td>
+				<td>SSD (Solid State Drive)</td>
+			</tr>
+			<tr>
+				<td>Hard Drive Capacity</td>
+				<td>256GB</td>
+				<td>256GB</td>
+				<td>64GB</td>
+			</tr>
+			<tr>
+				<td>Video/Graphics Card</td>
+				<td>Radeon Pro 5300 with 4GB of GDDR6 memory</td>
+				<td>Intel® UHD Graphics 620</td>
+				<td>Intel® HD Graphics</td>
+			</tr>
+			<tr>
+				<td>Audio Card/Output</td>
+				<td>Stereo speakers</td>
+				<td>Stereo speakers, integrated microphone</td>
+				<td>Stereo Speakers</td>
+			</tr>
+			<tr>
+				<td>Monitor</td>
+				<td>27-inch Retina 5K display (5120‑by‑2880 resolution)</td>
+				<td>13.3" diagonal FHD display</td>
+				<td>13.3" HD display (1920-by-1080 resolution)</td>
+			</tr>
+			<tr>
+				<td>AUX Ports</td>
+				<td>3.5 mm headphone jack</td>
+				<td>1 headset (headphone and microphone combo) port</td>
+				<td>3.5 mm headphone jack</td>
+			</tr>
+			<tr>
+				<td>Optical Drive</td>
+				<td>Compatible (not included)</td>
+				<td>Compatible (not included)</td>
+				<td>Not compatible (not included)</td>
+			</tr>
+			<tr>
+				<td>Ports</td>
+				<td>4 USB, 2 USB-C</td>
+				<td>2 USB, 1 HDMI</td>
+				<td>1 USB</td>
+			</tr>
+			<tr>
+				<td>Power Supply</td>
+				<td>200W Silver</td>
+				<td>HP Smart 65 W </td>
+				<td>48W Bronze</td>
+			</tr>
+			<tr>
+				<td>Cooling</td>
+				<td>Internal Fan (single)</td>
+				<td>Internal Fan (single)</td>
+				<td>Internal Fan (single)</td>
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td>19.7lb</td>
+				<td>3.28lb</td>
+				<td>3.28lb</td>
+			</tr>
+		</table>
+	</div>
+	<!--Footer section starts here. The footer, as seen below, is divided into two sections. The first one, given a class of "footer content" holds all the elements while the "copyright" div contains only the copyright.-->
+	<footer>
+		<!--Main footer content begins-->
+		<div class="footer-content">
+			<div class="footer-section map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26395.441820022887!2d-118.44416421218746!3d34.21203158145468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29726f550960b%3A0xc4acc6c59749d306!2sScranton%20Business%20Park!5e0!3m2!1sen!2sca!4v1607456657002!5m2!1sen!2sca" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<!--about section begins-->
+			<div class="footer-section about">
+				<h1 class="name">Novocom</h1>
+				<p>Founded in 2005, Novocom has been serving the Scranton community for 15 years with a dedication to our loyal customers and their experience with us.</p>
+				<div class="contact-info">
+					<span> <i class="fas fa-phone"></i>&nbsp;&nbsp; (613) 668-4690</span>
+					<span><i class="fas fa-envelope"></i>&nbsp;&nbsp; <a href="mailto:novocom69420@gmail.com">novocom69420@gmail.com</a></span>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+			<!--About section ends-->
+
+			<!--Footer Menu begins-->
+			<div class="footer-section directory">
+				<h2>Quick Access</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="compare.html">Compare</a></li>
+					<li><a href="price.html">Price</a></li>
+					<li><a href="type.html">Type</a></li>
+					<li><a href="user.html">User</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<!--Footer Menu ends-->
+		</div>
+		<!--Main footer content ends-->
+
+		<!--Copyright section begins. Instead of using a font-awesome class symbol, standard HTML hex symbol is used-->
+		<div class="copyright">
+			&copy;Novocom | Designed by Majd Al-Aarg
+		</div>
+		<!--copyright section ends-->
+
+	</footer>
+	<!--Footer section ends here-->
+	<script src="script.js"></script>
+</body>
+
+</html>

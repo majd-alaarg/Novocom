@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Us | Novocom</title>
+	<link rel="stylesheet" href="contact.css">
+	<script src="https://kit.fontawesome.com/380caa0673.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="images/logo-icon.png">
+</head>
+
+<body>
+	<!--The following button is for the back-top-button that is codeed with @keyframe CSS animations and Java Script-->
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+	<!--The following code is for the header and navigation bar, it includes the logo as well as responsive links leading to each page of the website. The styling properties are given under the styles.css file.-->
+	<header>
+		<img class="logo" src="images/logo.png" href="index.html">
+		<nav>
+			<ul class="nav-links">
+				<li class="nav-item"><a href="index.html">Home</a></li>
+				<li class="nav-item"><a href="explore.html">Explore</a></li>
+				<li class="dropdown nav-item">
+					<a href="compare.html" class="dropbtn">Compare</a>
+					<div class="dropdown-content">
+						<a href="price.html">Price</a>
+						<a href="type.html">Type</a>
+						<a href="user.html">User</a>
+					</div>
+				</li>
+			</ul>
+			<!--The following code is for the Contact. Unlike the rest of the Nav bar, it is placed under a different class and is not part of the unordered list in order to apply specific and unique properties to ressemble more a button-like look.-->
+			<a class="cta" href="contact.html"><button>Contact</button></a>
+		</nav>
+
+		<!--The following code is for the responsive aspect of the design. The following elements, the meny button and the associated links are given responsive media query CSS attributes. The following "menu cta" code is given to the menu button that is not visible unless the @media query allows it to. Within the "close" class, you find the X/times symbol that, using the Java script code, will close the pop-up menu. Following that, under the "overlay__content" class, are the nav links for the pop-up navigation.-->
+		<a class="menu cta"><button>Menu</button></a>
+	</header>
+	<div class="overlay">
+		<a class="close">&times;</a>
+		<div class="overlay-content">
+			<a href="explore.html">Explore</a>
+			<li class="dropdown">
+				<a href="compare.html" class="dropbtn">Compare</a>
+				<div class="dropdown-content">
+					<a href="price.html">Price</a>
+					<a href="type.html">Type</a>
+					<a href="user.html">User</a>
+				</div>
+			</li>
+			<a href="contact.html">Contact</a>
+			<a href="login.html">Login</a>
+		</div>
+	</div>
+	<!--Responsive, mobile navigation elements end-->
+	<!--Navbar elements end-->
+	<!--Header section ends-->
+
+	<!--Homepage/body section begins-->
+	<!--the following code is for the main header at the top of the page containing some images and brief text-->
+	<div class="header">
+		<div class="split">
+			<h3>Contact Us</h3>
+
+			<!--The following code is for the image slideshow located in the left section of the split header container-->
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img src="images/contact-icon1.png" style="width:50%">
+				</div>
+			</div>
+			<br>
+			<!--Slideshow container ends-->
+		</div>
+		<!--Left side of header container ends-->
+
+		<!--Right side of header container begins-->
+		<div class="split">
+			<p>Here at Novocom, our priority is customer satisfaction. We want to serve our loyal patrons to the best of our ability. If you ever need help with setting up your product, have a question or just want to contact us, we are always available. Making the right choice when it comes to computers is difficult but we are always here for you. Feel free to fill out our customer service form, refer to our FAQ or call us at (613) 668-4690. We are determined to provide the best service we can and would like to know how we can serve you better.</p>
+		</div>
+		<!--Right side of header container ends-->
+	</div>
+	<!--Main header container ends here-->
+
+
+	<!--The following code is for the contact form section. The contact form, under the class of "contactForm", is placed into a div class of "container." Each type of input is given a respective class for ease of styling within the CSS. All form elements are included.-->
+	<section>
+		<div class="container">
+			<div class="contactForm">
+				<h2>Send a Message</h2>
+				<div class="formBox">
+					<div class="inputBox w50">
+						<input type="text" id="name" required>
+						<label for="name">Full Name</label>
+					</div>
+					<div class="inputBox w50">
+						<input type="text" id="email" required>
+						<label for="email">Email</label>
+					</div>
+					<div class="inputBox w50">
+						<input type="text" id="address" required>
+						<label for="address">Address</label>
+					</div>
+					<div class="inputBox w50">
+						<input type="text" id="city" required>
+						<label for="city">City</label>
+					</div>
+					<div class="inputBox w50">
+						<input type="text" id="state" required>
+						<label for="state">State/Province</label>
+					</div>
+					<div class="inputBox w50">
+						<input type="text" id="postal" required>
+						<label for="postal">Zip/Postal Code</label>
+					</div>
+					<!--Upon analysis of the overall UX design alongside the execution of code, I found it more efficient to utilize tables to achieve the proper formatting rather than padding properties.-->
+					<table>
+						<tr>
+							<td><label for="countries">Country</label></td>
+							<td><select id="countries" name="countries">
+									<!--The following code is for the list of ~246 countries-->
+									<option value="Afganistan">Afghanistan</option>
+									<option value="Albania">Albania</option>
+									<option value="Algeria">Algeria</option>
+									<option value="American Samoa">American Samoa</option>
+									<option value="Andorra">Andorra</option>
+									<option value="Angola">Angola</option>
+									<option value="Anguilla">Anguilla</option>
+									<option value="Antigua & Barbuda">Antigua & Barbuda</option>
+									<option value="Argentina">Argentina</option>
+									<option value="Armenia">Armenia</option>
+									<option value="Aruba">Aruba</option>
+									<option value="Australia">Australia</option>
+									<option value="Austria">Austria</option>
+									<option value="Azerbaijan">Azerbaijan</option>
+									<option value="Bahamas">Bahamas</option>
+									<option value="Bahrain">Bahrain</option>
+									<option value="Bangladesh">Bangladesh</option>
+									<option value="Barbados">Barbados</option>
+									<option value="Belarus">Belarus</option>
+									<option value="Belgium">Belgium</option>
+									<option value="Belize">Belize</option>
+									<option value="Benin">Benin</option>
+									<option value="Bermuda">Bermuda</option>
+									<option value="Bhutan">Bhutan</option>
+									<option value="Bolivia">Bolivia</option>
+									<option value="Bonaire">Bonaire</option>
+									<option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+									<option value="Botswana">Botswana</option>
+									<option value="Brazil">Brazil</option>
+									<option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+									<option value="Brunei">Brunei</option>
+									<option value="Bulgaria">Bulgaria</option>
+									<option value="Burkina Faso">Burkina Faso</option>
+									<option value="Burundi">Burundi</option>
+									<option value="Cambodia">Cambodia</option>
+									<option value="Cameroon">Cameroon</option>
+									<option value="Canada">Canada</option>
+									<option value="Canary Islands">Canary Islands</option>
+									<option value="Cape Verde">Cape Verde</option>
+									<option value="Cayman Islands">Cayman Islands</option>
+									<option value="Central African Republic">Central African Republic</option>
+									<option value="Chad">Chad</option>
+									<option value="Channel Islands">Channel Islands</option>
+									<option value="Chile">Chile</option>
+									<option value="China">China</option>
+									<option value="Christmas Island">Christmas Island</option>
+									<option value="Cocos Island">Cocos Island</option>
+									<option value="Colombia">Colombia</option>
+									<option value="Comoros">Comoros</option>
+									<option value="Congo">Congo</option>
+									<option value="Cook Islands">Cook Islands</option>
+									<option value="Costa Rica">Costa Rica</option>
+									<option value="Cote DIvoire">Cote DIvoire</option>
+									<option value="Croatia">Croatia</option>
+									<option value="Cuba">Cuba</option>
+									<option value="Curaco">Curacao</option>
+									<option value="Cyprus">Cyprus</option>
+									<option value="Czech Republic">Czech Republic</option>
+									<option value="Denmark">Denmark</option>
+									<option value="Djibouti">Djibouti</option>
+									<option value="Dominica">Dominica</option>
+									<option value="Dominican Republic">Dominican Republic</option>
+									<option value="East Timor">East Timor</option>
+									<option value="Ecuador">Ecuador</option>
+									<option value="Egypt">Egypt</option>
+									<option value="El Salvador">El Salvador</option>
+									<option value="Equatorial Guinea">Equatorial Guinea</option>
+									<option value="Eritrea">Eritrea</option>
+									<option value="Estonia">Estonia</option>
+									<option value="Ethiopia">Ethiopia</option>
+									<option value="Falkland Islands">Falkland Islands</option>
+									<option value="Faroe Islands">Faroe Islands</option>
+									<option value="Fiji">Fiji</option>
+									<option value="Finland">Finland</option>
+									<option value="France">France</option>
+									<option value="French Guiana">French Guiana</option>
+									<option value="French Polynesia">French Polynesia</option>
+									<option value="French Southern Ter">French Southern Ter</option>
+									<option value="Gabon">Gabon</option>
+									<option value="Gambia">Gambia</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Germany">Germany</option>
+									<option value="Ghana">Ghana</option>
+									<option value="Gibraltar">Gibraltar</option>
+									<option value="Great Britain">Great Britain</option>
+									<option value="Greece">Greece</option>
+									<option value="Greenland">Greenland</option>
+									<option value="Grenada">Grenada</option>
+									<option value="Guadeloupe">Guadeloupe</option>
+									<option value="Guam">Guam</option>
+									<option value="Guatemala">Guatemala</option>
+									<option value="Guinea">Guinea</option>
+									<option value="Guyana">Guyana</option>
+									<option value="Haiti">Haiti</option>
+									<option value="Hawaii">Hawaii</option>
+									<option value="Honduras">Honduras</option>
+									<option value="Hong Kong">Hong Kong</option>
+									<option value="Hungary">Hungary</option>
+									<option value="Iceland">Iceland</option>
+									<option value="Indonesia">Indonesia</option>
+									<option value="India">India</option>
+									<option value="Iran">Iran</option>
+									<option value="Iraq">Iraq</option>
+									<option value="Ireland">Ireland</option>
+									<option value="Isle of Man">Isle of Man</option>
+									<option value="Italy">Italy</option>
+									<option value="Jamaica">Jamaica</option>
+									<option value="Japan">Japan</option>
+									<option value="Jordan">Jordan</option>
+									<option value="Kazakhstan">Kazakhstan</option>
+									<option value="Kenya">Kenya</option>
+									<option value="Kiribati">Kiribati</option>
+									<option value="Korea North">Korea North</option>
+									<option value="Korea Sout">Korea South</option>
+									<option value="Kuwait">Kuwait</option>
+									<option value="Kyrgyzstan">Kyrgyzstan</option>
+									<option value="Laos">Laos</option>
+									<option value="Latvia">Latvia</option>
+									<option value="Lebanon">Lebanon</option>
+									<option value="Lesotho">Lesotho</option>
+									<option value="Liberia">Liberia</option>
+									<option value="Libya">Libya</option>
+									<option value="Liechtenstein">Liechtenstein</option>
+									<option value="Lithuania">Lithuania</option>
+									<option value="Luxembourg">Luxembourg</option>
+									<option value="Macau">Macau</option>
+									<option value="Macedonia">Macedonia</option>
+									<option value="Madagascar">Madagascar</option>
+									<option value="Malaysia">Malaysia</option>
+									<option value="Malawi">Malawi</option>
+									<option value="Maldives">Maldives</option>
+									<option value="Mali">Mali</option>
+									<option value="Malta">Malta</option>
+									<option value="Marshall Islands">Marshall Islands</option>
+									<option value="Martinique">Martinique</option>
+									<option value="Mauritania">Mauritania</option>
+									<option value="Mauritius">Mauritius</option>
+									<option value="Mayotte">Mayotte</option>
+									<option value="Mexico">Mexico</option>
+									<option value="Midway Islands">Midway Islands</option>
+									<option value="Moldova">Moldova</option>
+									<option value="Monaco">Monaco</option>
+									<option value="Mongolia">Mongolia</option>
+									<option value="Montserrat">Montserrat</option>
+									<option value="Morocco">Morocco</option>
+									<option value="Mozambique">Mozambique</option>
+									<option value="Myanmar">Myanmar</option>
+									<option value="Nambia">Nambia</option>
+									<option value="Nauru">Nauru</option>
+									<option value="Nepal">Nepal</option>
+									<option value="Netherland Antilles">Netherland Antilles</option>
+									<option value="Netherlands">Netherlands (Holland, Europe)</option>
+									<option value="Nevis">Nevis</option>
+									<option value="New Caledonia">New Caledonia</option>
+									<option value="New Zealand">New Zealand</option>
+									<option value="Nicaragua">Nicaragua</option>
+									<option value="Niger">Niger</option>
+									<option value="Nigeria">Nigeria</option>
+									<option value="Niue">Niue</option>
+									<option value="Norfolk Island">Norfolk Island</option>
+									<option value="Norway">Norway</option>
+									<option value="Oman">Oman</option>
+									<option value="Pakistan">Pakistan</option>
+									<option value="Palau Island">Palau Island</option>
+									<option value="Palestine">Palestine</option>
+									<option value="Panama">Panama</option>
+									<option value="Papua New Guinea">Papua New Guinea</option>
+									<option value="Paraguay">Paraguay</option>
+									<option value="Peru">Peru</option>
+									<option value="Phillipines">Philippines</option>
+									<option value="Pitcairn Island">Pitcairn Island</option>
+									<option value="Poland">Poland</option>
+									<option value="Portugal">Portugal</option>
+									<option value="Puerto Rico">Puerto Rico</option>
+									<option value="Qatar">Qatar</option>
+									<option value="Republic of Montenegro">Republic of Montenegro</option>
+									<option value="Republic of Serbia">Republic of Serbia</option>
+									<option value="Reunion">Reunion</option>
+									<option value="Romania">Romania</option>
+									<option value="Russia">Russia</option>
+									<option value="Rwanda">Rwanda</option>
+									<option value="St Barthelemy">St Barthelemy</option>
+									<option value="St Eustatius">St Eustatius</option>
+									<option value="St Helena">St Helena</option>
+									<option value="St Kitts-Nevis">St Kitts-Nevis</option>
+									<option value="St Lucia">St Lucia</option>
+									<option value="St Maarten">St Maarten</option>
+									<option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+									<option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+									<option value="Saipan">Saipan</option>
+									<option value="Samoa">Samoa</option>
+									<option value="Samoa American">Samoa American</option>
+									<option value="San Marino">San Marino</option>
+									<option value="Sao Tome & Principe">Sao Tome & Principe</option>
+									<option value="Saudi Arabia">Saudi Arabia</option>
+									<option value="Senegal">Senegal</option>
+									<option value="Seychelles">Seychelles</option>
+									<option value="Sierra Leone">Sierra Leone</option>
+									<option value="Singapore">Singapore</option>
+									<option value="Slovakia">Slovakia</option>
+									<option value="Slovenia">Slovenia</option>
+									<option value="Solomon Islands">Solomon Islands</option>
+									<option value="Somalia">Somalia</option>
+									<option value="South Africa">South Africa</option>
+									<option value="Spain">Spain</option>
+									<option value="Sri Lanka">Sri Lanka</option>
+									<option value="Sudan">Sudan</option>
+									<option value="Suriname">Suriname</option>
+									<option value="Swaziland">Swaziland</option>
+									<option value="Sweden">Sweden</option>
+									<option value="Switzerland">Switzerland</option>
+									<option value="Syria">Syria</option>
+									<option value="Tahiti">Tahiti</option>
+									<option value="Taiwan">Taiwan</option>
+									<option value="Tajikistan">Tajikistan</option>
+									<option value="Tanzania">Tanzania</option>
+									<option value="Thailand">Thailand</option>
+									<option value="Togo">Togo</option>
+									<option value="Tokelau">Tokelau</option>
+									<option value="Tonga">Tonga</option>
+									<option value="Trinidad & Tobago">Trinidad & Tobago</option>
+									<option value="Tunisia">Tunisia</option>
+									<option value="Turkey">Turkey</option>
+									<option value="Turkmenistan">Turkmenistan</option>
+									<option value="Turks & Caicos Is">Turks & Caicos Is</option>
+									<option value="Tuvalu">Tuvalu</option>
+									<option value="Uganda">Uganda</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Ukraine">Ukraine</option>
+									<option value="United Arab Erimates">United Arab Emirates</option>
+									<option value="United States of America">United States of America</option>
+									<option value="Uraguay">Uruguay</option>
+									<option value="Uzbekistan">Uzbekistan</option>
+									<option value="Vanuatu">Vanuatu</option>
+									<option value="Vatican City State">Vatican City State</option>
+									<option value="Venezuela">Venezuela</option>
+									<option value="Vietnam">Vietnam</option>
+									<option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+									<option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+									<option value="Wake Island">Wake Island</option>
+									<option value="Wallis & Futana Is">Wallis Futana Is</option>
+									<option value="Yemen">Yemen</option>
+									<option value="Zaire">Zaire</option>
+									<option value="Zambia">Zambia</option>
+									<option value="Zimbabwe">Zimbabwe</option>
+									<!--country option list ends-->
+								</select></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>Are you a returning customer?</td>
+							<td>
+								<input type="radio" id="yes" name="been-here" value="yes">
+								<label for="yes">Yes</label>&emsp;&emsp;
+								<input type="radio" id="no" name="been-here" value="no">
+								<label for="no">No</label>
+							</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top">What do you need help with?</td>
+							<td>
+								<input type="checkbox" id="product" name="product" value="product">
+								<label for="product">Product Support</label>&emsp;<br>
+								<input type="checkbox" id="order" name="order" value="order">
+								<label for="order">Order Status</label>&emsp;<br>
+								<input type="checkbox" id="warranty" name="warranty" value="warranty">
+								<label for="warranty">Warranty</label>&emsp;<br>
+								<input type="checkbox" id="inquiry" name="inquiry" value="inquiry">
+								<label for="inquiry">General Inquiry</label>&emsp;
+							</td>
+						</tr>
+						<tr>
+							<td><label for="computer-type">What type of device do you own?</label></td>
+							<td><select id="computer-type" name="computer-type">
+									<option value="iMac">iMac</option>
+									<option value="windows">Windows Desktop</option>
+									<option value="Macbook">Macbook</option>
+									<option value="PC">PC</option>
+									<option value="Linux">Linux PC</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Rate your experience on a scale of 1-10</td>
+							<td>
+								<input type="number" id="quantity" name="quantity" min="1" max="10">
+							</td>
+						</tr>
+					</table>
+					<div class="inputBox w100">
+						<textarea class="review"></textarea>
+						<label for="review">Please leave your message down below</label>
+					</div>
+					<div class="inputBox w100">
+						<input type="submit" value="Send">
+					</div>
+				</div>
+				<!--Actual form box content ends-->
+			</div>
+			<!--Contact form div class ends-->
+		</div>
+		<!--Container for the contact form ends-->
+	</section>
+	<!--contact form section ends-->
+
+
+	<!--The following section is for the FAQ portion. The accordion titles, given the class of accordion, are visible in every state.  The paragraphs "<p>", under the class of panel, are hidden.-->
+	<div class="faq">
+		<!--Accordion 1 section begins-->
+		<h1>Frequently asked questions</h1>
+		<h3>If you have a quick question, check to see if there's already a quick answer!</h3>
+		<div class="accordion">My computer is slow and keeps crashing, why?</div>
+		<div class="panel">
+			<p>There are several reasons why a computer may just stop working or "freeze". Excessive background processes, programs running in the background, overwork your RAM. High performance games or programs that take up more RAM than you have available could slow down your desktop. A computer that starts to slow down can be overloaded with temporary data or programs using up its memory. Freezing can also be caused by malware or errors on your hard disk.</p>
+		</div>
+		<!--Accordion 1 section ends-->
+
+		<!--Accordion 2 section begins-->
+		<div class="accordion">My monitor isn't loading anything, what do I do?</div>
+		<div class="panel">
+			<p>The easiest solution is to make sure the monitor is on. If the power light isn't on, press the power button and hold. If that doesn't work, unplug the monitor from the desktop and wait, then reconnect. Make sure that the monitor is connected properly to the back of the computer. If you stepped away from the computer for a bit and returned to a black screen, the computer is likely asleep. Try moving your mouse, clicking the mouse buttons, or pressing any key (e.g., spacebar) to wake it up. If none of those actions work, press the power button.</p>
+		</div>
+		<!--Accordion 2 section ends-->
+
+		<!--Accordion 3 section begins-->
+		<div class="accordion">My PC frequently loses connection to the wireless network.</div>
+		<div class="panel">
+			<p>Right-click the wireless connection icon in the notification area, then select Troubleshoot problems. It’s possible that your location may be causing interference with the WiFi signal – try moving to another location to attempt to connect to the service. If you find that the wireless connection is still weak, consider purchasing a different antenna for your router or set up another router as a signal repeater. If your network includes a wireless route or wireless modem/router combination, unplug the power cord.</p>
+		</div>
+		<!--Accordion 3 section ends-->
+
+		<!--Accordion 4 section begins-->
+		<div class="accordion">I keep getting a security pop-up when trying to connect to my WIFI.</div>
+		<div class="panel">
+			<p>Public WiFi services trigger a "safety" on some devices automatically to increase the security settings to protect you. It's important that you keep your device protected on public networks. To do that, try to install an software and a firewall on your laptop as a precaution. Most importantly, don't enter any sensitive details on public netowrks. Make sure you are aware of the risks of connecting to public networks before you do so and take the necessary steps to keep yourself protected.</p>
+		</div>
+		<!--Accordion 4 section ends-->
+
+		<!--Accordion 5 section begins-->
+		<div class="accordion">How do I set up my browser to accept cookies?</div>
+		<div class="panel">
+			<p>Do you have to accept cookies? No, there's nothing forcing you. Blocking all cookies limit the speed of your Internet experience. Cookies are files with small bits of data used to speed up your interaction with a website when you use more than once. Websites that use these cookies are always required to ask you for cookies. If you want, you can go to your browser settings and go to privacy settings to change the way websites ask you for cookies and make it automatic.</p>
+		</div>
+		<!--Accordion 5 section ends-->
+	</div>
+	<!--FAQ section ends here-->
+
+
+	<!--Footer section starts here. The footer, as seen below, is divided into two sections. The first one, given a class of "footer content" holds all the elements while the "copyright" div contains only the copyright.-->
+	<footer>
+		<!--Main footer content begins-->
+		<div class="footer-content">
+			<div class="footer-section map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26395.441820022887!2d-118.44416421218746!3d34.21203158145468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29726f550960b%3A0xc4acc6c59749d306!2sScranton%20Business%20Park!5e0!3m2!1sen!2sca!4v1607456657002!5m2!1sen!2sca" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<!--about section begins-->
+			<div class="footer-section about">
+				<h1 class="name">Novocom</h1>
+				<p>Founded in 2005, Novocom has been serving the Scranton community for 15 years with a dedication to our loyal customers and their experience with us.</p>
+				<div class="contact-info">
+					<span> <i class="fas fa-phone"></i>&nbsp;&nbsp; (613) 668-4690</span>
+					<span><i class="fas fa-envelope"></i>&nbsp;&nbsp; <a href="mailto:novocom69420@gmail.com">novocom69420@gmail.com</a></span>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com/Novocom3" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/novocom_scranton/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				</div>
+			</div>
+			<!--About section ends-->
+
+			<!--Footer Menu begins-->
+			<div class="footer-section directory">
+				<h2>Quick Access</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="compare.html">Compare</a></li>
+					<li><a href="price.html">Price</a></li>
+					<li><a href="type.html">Type</a></li>
+					<li><a href="user.html">User</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<!--Footer Menu ends-->
+		</div>
+		<!--Main footer content ends-->
+
+		<!--Copyright section begins. Instead of using a font-awesome class symbol, standard HTML hex symbol is used-->
+		<div class="copyright">
+			&copy;Novocom | Designed by Majd Al-Aarg
+		</div>
+		<!--copyright section ends-->
+
+	</footer>
+	<!--Footer section ends here-->
+
+	<script src="script.js"></script>
+</body>
+
+</html>

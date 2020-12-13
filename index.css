@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*The following 250 lines of code are for the Navbar Properties, including the header*/
+
+/*The following attributes, given to the list items, links, and button elements, act as the overarching style for the nav bar. In order to achieve a consistent look while maintaining "efficiency" in the code, the elements have been grouped together.*/
+
+li,
+a,
+button {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: 450;
+	text-decoration: none;
+	color: aliceblue;
+
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 5% 0 5%;
+	align-items: center;
+	background-color: #2b2b2b;
+}
+
+
+/*The followign properties are standard attributes given to the navigation bar and its links in order to achieve the nav bar design. Certain properties are given transition properties for the animation to create a user interactive design*/
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	cursor: pointer;
+	height: 70%;
+	width: auto;
+}
+
+
+/*The following section is for the nav links. The defauly properties are altered to achieve the nav-bar design. Furthermore, halfway through the section, the "nav-links" are given properties under their hoevr state that act as animations that occur upon hover.*/
+.nav-links {
+	list-style: none;
+	margin-right: 1.4rem;
+}
+
+.nav-links li {
+	display: inline-block;
+	padding: 0.4rem 1rem;
+}
+
+nav ul li a {
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #fff;
+	margin: 0 10px;
+}
+
+nav ul li a {
+	position: relative;
+	z-index: 1;
+}
+
+/*The following attributes are given to the drop down elements in the HTML under the classes of "dropdown" and "dropdown-content." They are given all the necessary properties needed to achieve the dropdown navbar format.*/
+.dropdown {
+	list-style: none;
+	text-align: center;
+	transition: all .5s;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(28, 28, 28, 0.925);
+	width: 6.8rem;
+}
+
+.dropdown-content a {
+	color: black;
+	background-color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/*The following section is for the animation of the nav-links upon hover. As seen several lines down, the default view of the "box" is set to transparent. All properties given in the ":after" state are made visible in the ":hover" under the visibility property. The @media query below is used in media queries to apply nav-link box animations only when the screen is larger than 768. Further down, a media query will be used to make a hidden, toggle-only nav bar for smaller devices.*/
+@media only screen and (min-width: 768px) {
+
+	nav ul li a,
+	nav ul li a:after,
+	nav ul li a:before {
+		transition: all .5s;
+	}
+
+	nav-item:hover {
+		color: white;
+	}
+
+	nav ul li a:after {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 100%;
+		height: 1px;
+		content: '';
+		color: transparent;
+		background: #7d8ca3;
+		visibility: none;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	nav ul li a:hover:after {
+		opacity: 1;
+		visibility: visible;
+		height: 100%;
+		border-radius: 3px;
+	}
+}
+
+/*Nav-links hover animation ends*/
+
+/*The following properties are given to the buttons in the navbar in order to differentiate between the other links. The properties achieve a button-like look that's offset from the rest.*/
+button {
+	padding: 0.3rem;
+	margin-right: 1rem;
+	width: 6em;
+	background-color: #009090;
+	border: none;
+	border-radius: 4rem;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+button:hover {
+	background-color: rgba(0, 136, 169, .5);
+	transform: scale(1.1);
+}
+
+/*Button properties end*/
+
+
+/*The following section contains the CSS properties for the responsive menu that is displayed with a media query attribute set to "max-width (768)". The responsive deisgn improves the User Interactivity for Mobile or Tablet users and displays a level of depth to the development.*/
+.menu {
+	display: none;
+}
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: #24252a;
+	overflow-x: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+	width: 100%;
+}
+
+.overlay-content {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay a {
+	padding: 15px;
+	font-size: 36px;
+	display: block;
+	transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #0088a9;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: #edf0f1;
+	cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+
+	.overlay .close {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+/*The following media query toggles the mobile navigation elements and properties on devices with a display of < 768*/
+@media only screen and (max-width: 1000px) {
+
+	.nav-links,
+	.cta {
+		display: none;
+	}
+
+	.menu {
+		display: initial;
+	}
+}
+
+/*Mobile Navigation properties end*/
+/*Navbar properties end*/
+/*Header properties end*/
+
+
+/*Main body properties begin. A seen in the last line for the .main-container, this section is given a display of flex so that the other subclasses within the container (the text, the images, the icons) are displayed side by side. Further more, since the purpose of the page is to be a 1 view, aesthetic landing page, the overflow is hidden.*/
+.container {
+	background-image: url(images/background.png);
+	background-size: 100% 100vh;
+
+}
+
+.main-container {
+	height: 90vh;
+	width: 100%;
+	padding: 0 2vw 0 5vw;
+	display: flex;
+}
+
+.text-left,
+.img-right {
+	width: 50vw;
+}
+
+
+
+/*The followign properties are given to the left side of the page*/
+.text-left {
+	padding: 8% 0 50px 0
+}
+
+/*The following code contains the styling properties for the search bar*/
+.search {
+	margin-top: 5vh;
+	width: 260px;
+	display: flex;
+	align-items: center;
+	padding: 8px 15px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
+.search i {
+	height: 1vw;
+	margin-right: 10px;
+	cursor: pointer;
+	opacity: 0.5;
+	color: #ffffff;
+	opacity: 1;
+}
+
+.search input {
+	width: 100%;
+	outline: none;
+	border: 0;
+	color: #999;
+	background: transparent;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/*Search bar ends*/
+/*Main text properties begin*/
+hr {
+	width: 50%;
+	height: 3px;
+	background: white;
+	margin: 1rem 0 2rem;
+}
+
+h1 {
+	font-size: 12vh;
+	color: aliceblue;
+	line-height: 100%;
+	font-family: 'Teko', sans-serif;
+	font-weight: 500;
+	line-height: 0.8;
+}
+
+p {
+	color: #fff;
+	margin-top: 1vw;
+	font-size: calc(10px + .5vw);
+	line-height: calc(100% + 1vh);
+	font-weight: 500;
+	font-family: 'Lato', sans-serif;
+}
+
+/*Main text properties end*/
+
+
+/*The following properties are for the right side of the page including the main image and the social media icons*/
+/*Image Properties Begin*/
+.img-right {
+	padding-left: 8%;
+}
+
+.img {
+	margin-top: 20vh;
+	width: 35vw;
+}
+
+/*Image Properties end*/
+
+/*Social Media icon properties begin*/
+.social-media-icons {
+	color: white;
+	margin-top: 30vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	float: right;
+}
+
+
+.fab {
+	font-size: 1.5rem;
+	padding: 20px;
+	transition: all .5s ease-in-out;
+	text-align: right;
+}
+
+.fab:hover {
+	transform: scale(1.3);
+}
+
+/*Social Media icon properties end*/
+
+/*The following code is for the responsive view of the website. It makes several elements invisible and modifies the properties to improve the compatability of the UI design*/
+@media only screen and (max-width: 1000px) {
+	.main-container {
+		flex-direction: column-reverse;
+	}
+
+	.social-media-icons {
+		display: none;
+	}
+
+	.text-left,
+	.img-right {
+		width: 100%;
+	}
+
+
+	.img-right {
+		display: none;
+	}
+
+	.text-left {
+		padding: 0 0 30vh 0
+	}
+}
+
+/*Responsive View Ends*/
+/*Right side 
